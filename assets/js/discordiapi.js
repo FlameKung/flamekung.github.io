@@ -8,7 +8,6 @@ $.ajax({
     let invcode = data.instant_invite.split("/")[4]
     window.location.replace(data.instant_invite);
 
-
     var invite_data = `https://discord.com/api/v9/invites/${invcode}`;
     $.getJSON(invite_data, function(data) {
       console.log(data.guild.name);
